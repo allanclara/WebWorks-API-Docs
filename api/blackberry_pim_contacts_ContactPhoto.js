@@ -18,20 +18,19 @@
  * @toc {PIM} ContactPhoto
  * @featureID blackberry.pim.contacts
  * @class The ContactPhoto object contains the address information of a Contact object.
- * @constructor Constructor for a new ContactPhoto object.
- * @param {String} originalFilePath The file path to the contact's photo.
- * @param {Boolean} pref Whether this ContactPhoto contains the user's preferred value.
  * @BB10X
  * @example
  * function createContact() {
  *     var contacts = blackberry.pim.contacts;
  *
- *     var primaryPhoto = new contacts.ContactPhoto(
- *         blackberry.io.home + "/photos/contact.png",
- *         true);
- *     var secondaryPhoto = new contacts.ContactPhoto(
- *         blackberry.io.home + "/photos/other.png",
- *         false);
+ *     var primaryPhoto = {
+ *          originalFilePath: blackberry.io.home + "/photos/contact.png",
+ *          pref: true
+ *      };
+ *     var secondaryPhoto = {
+ *          originalFilePath: blackberry.io.home + "/photos/other.png",
+ *          pref: false
+ *      };
  *
  *     var newContact = contacts.create();
  *     newContact.photos = [primaryPhoto, secondaryPhoto];
